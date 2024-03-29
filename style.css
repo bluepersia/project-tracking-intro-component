@@ -4,6 +4,7 @@
     --color-2: hsl(0,47%, 51%);
     --color-3: hsl(231, 30%, 20%);
     --color-4: hsl(210, 26%, 93%);
+    --color-5:white;
 }
 
 html {
@@ -13,6 +14,7 @@ html {
 
 body {
     font-family: "Barlow Condensed", sans-serif;
+    color: var(--color-3);
 }
 p 
 {
@@ -44,9 +46,123 @@ h1 {
     transition: filter 300ms;
     color: var(--color-4);
     cursor: pointer;
+    border-radius: 8px;
 }
 
 .btn:hover 
 {
     filter: brightness(140%);
+}
+
+
+body::before
+{
+    content: '';
+    width: 75%;
+    height: 425px;
+    position: absolute;
+    top:0px;
+    left:50%;
+    background-color: var(--color-4);
+    z-index: -1;
+    border-radius: 32px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.1em 8.5% 3.55em;
+}
+
+
+.nav {
+    display: none;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.hero_img {
+    width: 128.5%;
+    max-width: 916px;
+    object-fit: contain;
+}
+.hero_content 
+{
+    padding: 1.5em 8.5% 5.1em;
+}
+
+
+.hero_overtitle {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: .88em;
+    font-size: .83rem;
+    margin-bottom: .88em;
+}
+.hero_new {
+    padding: .2em .73em;
+    color: var(--color-5);
+    background-color: var(--color-3);
+    border-radius: 16px;
+    letter-spacing: .06em;
+}
+
+.hero_desc {
+    opacity: 50%;
+    letter-spacing: .33em;
+
+}
+
+.title {
+    margin-bottom: .4em;
+}
+
+.hero_body {
+    opacity: 75%;
+    margin-bottom: 1.5em;
+}
+
+.hero_btns {
+    display: flex;
+    align-items: center;
+    gap: 1.11em;
+}
+
+.hero_preview 
+{
+    opacity: 50%;
+    text-transform: uppercase;
+    letter-spacing: 0.17em;
+    font-size: 0.77em;
+}
+
+
+@media (min-width: 768px) {
+
+    .nav {
+        display: block;
+    }
+    .btn-menu {
+        display: none;
+    }
+
+
+    .main {
+        flex-direction: row;
+    }
+
+    .hero_content {
+    }
+    .hero_img{
+        width: 82.5%;
+        position: relative;
+        transform: translateX(25%);
+    }
+    
 }
