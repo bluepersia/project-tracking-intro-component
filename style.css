@@ -1,0 +1,51 @@
+:root 
+{
+    --color-1: hsl(0,100%,68%);
+    --color-2: hsl(0,47%, 51%);
+    --color-3: hsl(231, 30%, 20%);
+    --color-4: hsl(210, 26%, 93%);
+}
+
+html {
+    font-size: 18px;
+}
+
+
+body {
+    font-family: "Barlow Condensed", sans-serif;
+}
+p 
+{
+    line-height: 1.44;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.22rem;
+    line-height: 1;
+}
+
+
+
+.btn 
+{
+    font-size: .77rem;
+    letter-spacing: 0.066em;
+    font-weight: bold;
+    font-family: inherit;
+    padding: .85em 1.78em;
+    text-transform: uppercase;
+    border:none;
+    background-color: var(--color-1);
+    transition: filter 300ms;
+    color: var(--color-4);
+    cursor: pointer;
+}
+
+.btn:hover 
+{
+    filter: brightness(140%);
+}
